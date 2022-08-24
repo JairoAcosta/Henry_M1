@@ -8,32 +8,32 @@ Determiná que será impreso en la consola, sin ejecutar el código.
 > Investiga cuál es la diferencia entre declarar una variable con `var` y directamente asignarle un valor.
 
 ```javascript
-x = 1;
+x = 1; 
 var a = 5;
 var b = 10;
 var c = function(a, b, c) {
   var x = 10;
-  console.log(x);
-  console.log(a);
+  console.log(x);//imprime 10
+  console.log(a);//imprime 8
   var f = function(a, b, c) {
     b = a;
-    console.log(b);
+    console.log(b); //imprime 8
     b = c;
     var x = 5;
   }
   f(a,b,c);
-  console.log(b);
+  console.log(b); //imprime 10
 }
 c(8,9,10);
-console.log(b);
-console.log(x);
+console.log(b);//imprime 10
+console.log(x);//imprime 1
 ```
 
 ```javascript
 console.log(bar);
 console.log(baz);
 foo();
-function foo() { console.log('Hola!'); }
+function foo() { console.log('Hola!'); }//imprime hola 
 var bar = 1;
 baz = 2;
 ```
